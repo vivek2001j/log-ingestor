@@ -20,7 +20,7 @@ const Home = () => {
 
   const searchLogs = async () => {
     try {
-      const response = await axios.post(`http://localhost:3000/search?query=${query}`);
+      const response = await axios.get(`http://localhost:3000/search?query=${query}`);
       setResults(response.data.hits);
     } catch (error) {
       console.error('Error searching logs:', error);
